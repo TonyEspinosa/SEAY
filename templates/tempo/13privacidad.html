@@ -1,0 +1,87 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>
+                    Avisos de Privacidad
+                </h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<div class="card">
+    <div class="card-header border-transparent">
+        <h3 class="card-title">{% block Table_Desc %} Avisos de Privacidad {% endblock %}</h3>
+        {% block Card_Options %}
+        <div class="card-tools">
+        </div>
+    </div>
+    {% endblock %}
+
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-striped m-0">
+                <thead>
+                    <tr>
+                        <th>Numero</th>
+                        <td style="width: 220px">Nombre</td>
+                        <td style="width: 220px">PDF</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row">1</th>
+                        <td>Programa Anual</td>
+                        <td><i class="fa-solid file-pdf"></i></td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">2</th>
+                        <td>Oficio de Aprobación</td>
+                        <td><i class="fas fa-file-pdf fa-solid"></i></td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">3</th>
+                        <td>Informe Anual</td>
+                        <td><i class="fas file-pdf fa-solid"></i></td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">4</th>
+                        <td>Minuta de Informe</td>
+                        <td><i class="fa-regular fa-file-pdf"></i></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Numero</th>
+                        <td style="width: 220px">Nombre</td>
+                        <td style="width: 220px">PDF</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+        {% block Table_Button %}
+
+        {% endblock %}
+    </div>
+    <!-- /.card-footer -->
+</div>
+<br>
+
+
+{% block modal %}
+
+{% endblock %}
+
+{% endblock %}

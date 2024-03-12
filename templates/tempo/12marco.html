@@ -1,0 +1,74 @@
+{% extends 'table.html' %}
+{% load static %}
+
+{% block Table_Title %}
+Marco Normativo
+{% endblock %}
+
+{% block Table_Links %}
+<li class="breadcrumb-item"><a href="#">Transparencia</a></li>
+<li class="breadcrumb-item active">Marco Jurídico</li>
+{% endblock %}
+
+{% block Table_Desc %}
+Listado de Documentos
+{% endblock %}
+
+{% block Card_Options %}
+
+{% endblock %}
+
+{% block Table_Head %}
+<th style="width: 220px">Número</th>
+<td>Nombre</td>
+<td style="width: 220px">PDF</td>
+{% endblock %}
+
+{% block Table_Body %}
+<tr class="table-active">
+    <th scope="row">1</th>
+    <td>Programa Anual</td>
+    <td><span style="color: red;">
+            <i class="far fa-file-pdf"></i>
+        </span>
+    </td>
+</tr>
+<tr class="table-active">
+    <th scope="row">2</th>
+    <td>Oficio de Aprobación</td>
+    <td><span style="color: red;">
+            <i class="far fa-file-pdf"></i>
+        </span>
+    </td>
+</tr>
+<tr class="table-active">
+    <th scope="row">3</th>
+    <td>Informe Anual</td>
+    <td><span style="color: red;">
+            <i class="far fa-file-pdf"></i>
+        </span>
+    </td>
+</tr>
+<tr class="table-active">
+    <th scope="row">4</th>
+    <td>Minuta de Informe</td>
+    <td><span style="color: red;">
+            <i class="far fa-file-pdf"></i>
+        </span>
+    </td>
+</tr>
+{% endblock %}
+
+{% block Table_Foot %}
+<th style="width: 220px">Numero</th>
+<td>Nombre</td>
+<td style="width: 220px">PDF</td>
+{% endblock %}
+
+{% block Table_Button %}
+
+{% endblock %}
+
+{% block modal %}
+
+{% endblock %}

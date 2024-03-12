@@ -1,0 +1,82 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>
+                Directorio
+            </h1>
+        </div>
+        </div>
+    </div><!-- /.container-fluid -->
+    </section>
+    
+    <!-- Main content -->
+    <div class="card">
+        <div class="card-header border-transparent">
+          <h3 class="card-title">{% block Table_Desc %} Listado de Servidores Públicos {% endblock %}</h3>
+          {% block Card_Options %}
+          <div class="card-tools">
+          </div>
+        </div>
+        {% endblock %}
+
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-striped m-0">
+                    <thead>
+                        <tr>
+                            <th>Responsable</th>
+                            <td style="width: 220px">Puesto</td>
+                            <td style="width: 220px">Teléfono</td>
+                            <td style="width: 220px">Correo Institucional</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active">
+                            <th scope="row">
+                                L.N.R.I. Marysol Contreras Navarrete</th>
+                            <td>
+                                Secretaria Técnica de la SESEAY
+                            </td>
+                            <td>
+                                (999)5.65.56.20 EXT 101
+                            </td>
+                            <td>
+                                marysol.contreras@seay.org.mx
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Responsable</th>
+                            <td style="width: 220px">Puesto</td>
+                            <td style="width: 220px">Teléfono</td>
+                            <td style="width: 220px">Correo Institucional</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+                {% block Table_Button %}
+
+                {% endblock %}
+            </div>
+            <!-- /.card-footer -->
+        </div>
+    <br>
+    
+            
+    {% block modal %}
+
+    {% endblock %}
+
+{% endblock %}

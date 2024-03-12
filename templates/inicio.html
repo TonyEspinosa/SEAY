@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {% block extrahead %}
+
+    {% endblock %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'style.html'%}
+
+    <title>{% block title %} SEAY v1.0 {% endblock %}</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="card">
+            <div class="card-body">
+                <!-- Imagen de encabezado -->
+                <!-- <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-2 bg-gradient-dark">
+                            <a href="{% url 'u_home' %}">
+                                <img class="card-img-top" src="{% static 'img/logo-header.png' %}" alt="Sistema Estatal Anticorrupción de Yucatán">
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <hr>
+                {% block header %}
+                {% include 'navbar.html'%}
+                {% endblock %}
+                <hr>
+
+                {% block content %}
+
+                <!-- Main content -->
+                <div class="card">
+                    <div class="card-header border-transparent">
+                        <div class="card-tools">
+                            <h2>Secretaría Ejecutiva</h2>
+                            <p>La Secretaría Ejecutiva del Sistema Estatal Anticorrupción de Yucatán (SESEAY) es un
+                                organismo público descentralizado, no sectorizado, con personalidad jurídica y
+                                patrimonio propio, autonomía técnica y de gestión, funge como órgano de apoyo técnico
+                                del Comité Coordinador, a efecto de proveer asistencia técnica, así como los insumos
+                                necesarios para el desempeño de sus atribuciones, conforme a lo dispuesto en la Fracción
+                                III del artículo 101 bis de la Constitución Política del Estado de Yucatán.</p>
+                            <h2>Comité de Participación Ciudadana</h2>
+                            <p>El Sistema Estatal Anticorrupción de Yucatán está integrado por dos órganos colegiados
+                                que son el Comité Coordinador y el Comité de Participación Ciudadana (CPC). De acuerdo
+                                con lo establecido en el artículo 22 de la Ley del Sistema Estatal Anticorrupción de
+                                Yucatán, el CPC es la instancia, que tiene como objetivo coadyuvar al cumplimiento del
+                                objeto del Comité Coordinador, así como ser la instancia de vinculación con las
+                                organizaciones sociales y académicas relacionadas con las materias de los sistemas
+                                nacional y estatal anticorrupción.</p>
+                            <h2>Comité Coordinador</h2>
+                            <p>Es el eje rector del sistema estatal, conformado por los titulares o representantes de
+                                seis instituciones de gobierno y quien preside, cuya función es establecer, articular y
+                                evaluar las políticas públicas, procedimientos y principios entre los entes públicos
+                                para la prevención, disminución y combate a la corrupción.</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                {% endblock %}
+
+            </div>
+
+            {% block footer %}
+            {% include 'footer.html'%}
+            {% endblock %}
+        </div>
+        {% include 'scripts.html'%}
+</body>
+
+</html>
